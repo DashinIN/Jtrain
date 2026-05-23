@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-05-23T10:38:47.281Z",
+  "kanjiCount": 2136,
+  "tatoebaSentenceCount": 2086,
+  "sources": [
+    {
+      "name": "KANJIDIC2",
+      "license": "Creative Commons Attribution-ShareAlike 4.0",
+      "url": "https://www.edrdg.org/wiki/KANJIDIC_Project"
+    },
+    {
+      "name": "KanjiVG",
+      "license": "Creative Commons Attribution-ShareAlike 3.0",
+      "url": "https://kanjivg.tagaini.net/"
+    },
+    {
+      "name": "Tatoeba text sentences",
+      "license": "CC BY 2.0 FR / CC0 depending on sentence metadata",
+      "url": "https://tatoeba.org/downloads"
+    }
+  ]
+}
