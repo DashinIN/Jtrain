@@ -1,0 +1,12 @@
+{
+  "name": "JTrain",
+  "short_name": "JTrain",
+  "description": "Local-first Japanese kana, kanji, reading, audio, and SRS trainer.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#101418",
+  "theme_color": "#101418",
+  "lang": "en"
+}
+
