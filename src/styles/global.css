@@ -357,6 +357,10 @@ input[type="checkbox"] {
   gap: 0.65rem;
 }
 
+.choice-grid.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .choice-button {
   min-height: 58px;
   display: grid;
@@ -626,6 +630,141 @@ kbd {
   border: 1px solid var(--border);
 }
 
+.kana-dashboard {
+  align-items: stretch;
+}
+
+.compact-stats {
+  align-self: stretch;
+}
+
+.kana-trainer {
+  min-height: calc(100vh - 160px);
+  display: grid;
+  grid-template-rows: auto auto minmax(240px, 1fr) auto auto;
+  gap: 1rem;
+}
+
+.kana-session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-button,
+.audio-pill,
+.icon-action {
+  width: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.kana-stage {
+  min-height: clamp(220px, 48vh, 430px);
+  display: grid;
+  place-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.kana-stage.draw-mode {
+  min-height: 170px;
+}
+
+.kana-glyph {
+  max-width: 100%;
+  font-size: clamp(4.8rem, 34vw, 11rem);
+  line-height: 0.95;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.kana-caption {
+  display: grid;
+  gap: 0.25rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.kana-caption strong {
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.kana-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.kana-toolbar .large {
+  flex: 1 1 220px;
+}
+
+.kana-inline-answer {
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  text-align: center;
+}
+
+.kana-inline-answer p {
+  margin: 0.2rem 0;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.kana-inline-answer small {
+  color: var(--muted);
+}
+
+.handwriting-pad {
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+}
+
+.handwriting-canvas {
+  width: min(320px, 100%);
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  touch-action: none;
+}
+
+.handwriting-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.handwriting-hint {
+  min-height: 1.4rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.state-correct .kana-stage,
+.state-correct .handwriting-canvas {
+  border-color: var(--success);
+}
+
+.state-wrong .kana-stage,
+.state-wrong .handwriting-canvas {
+  border-color: var(--danger);
+}
+
 @media (min-width: 720px) {
   .app-shell {
     padding-bottom: 0;
@@ -672,6 +811,10 @@ kbd {
   .control-grid,
   .settings-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .choice-grid.compact {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .quiz-prompt {
